@@ -1,1 +1,331 @@
-<a href="projects/production-simulation.html" class="project-link">View case study →</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Production Simulation | Lyna Berkane</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #1f2937;
+    background: #f8fafc;
+}
+
+nav {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 18px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: #111827;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+.hero {
+    background: #111827;
+    color: white;
+    padding: 90px 0;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 19px;
+    color: #d1d5db;
+    max-width: 800px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e5e7eb;
+    color: #374151;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 5px 5px 5px 0;
+    font-size: 14px;
+}
+
+section {
+    padding: 55px 0;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border: 1px solid #e5e7eb;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.highlight {
+    border-left: 4px solid #111827;
+    padding-left: 20px;
+    margin: 25px 0;
+}
+
+.scenario {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.scenario div {
+    background: #f1f5f9;
+    padding: 18px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 25px;
+    color: #111827;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer {
+    background: #111827;
+    color: #d1d5db;
+    text-align: center;
+    padding: 30px;
+}
+
+@media(max-width: 700px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .scenario {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="container">
+        <a href="../index.html">← Lyna Berkane</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <p>Production Systems · Simulation · Industrial AI</p>
+
+        <h1>Production System Simulation</h1>
+
+        <p>
+            Discrete-event simulation of a production environment to
+            analyze capacity, bottlenecks and the impact of different
+            production scenarios.
+        </p>
+    </div>
+</header>
+
+<main>
+
+<section>
+<div class="container">
+
+<h2>Project Overview</h2>
+
+<p>
+This project focused on modeling and simulating a production system
+using AnyLogic. The objective was to understand how production
+parameters influence system performance and to support decisions
+through simulation-based analysis.
+</p>
+
+<div class="highlight">
+<strong>Goal:</strong> Analyze production performance and compare
+different operational scenarios before making physical changes to
+the production system.
+</div>
+
+<div>
+<span class="tag">AnyLogic</span>
+<span class="tag">Discrete-Event Simulation</span>
+<span class="tag">Production Systems</span>
+<span class="tag">Process Analysis</span>
+<span class="tag">Scenario Analysis</span>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Business Problem</h2>
+
+<div class="card">
+<p>
+Production systems can experience bottlenecks, queues and capacity
+constraints when product mix and processing times change.
+</p>
+
+<p>
+The challenge was to create a simulation model that could represent
+the production process and allow different operational scenarios to
+be tested.
+</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Simulation Approach</h2>
+
+<div class="card">
+
+<h3>Production Model</h3>
+
+<p>
+A production environment based on a German packaging case was modeled
+using discrete-event simulation.
+</p>
+
+<h3>Product and Setup Scenarios</h3>
+
+<p>
+Different setup times were considered depending on the product or
+product family.
+</p>
+
+<div class="scenario">
+<div><strong>0 min</strong><br>Setup</div>
+<div><strong>5 min</strong><br>Setup</div>
+<div><strong>15 min</strong><br>Setup</div>
+<div><strong>45 min</strong><br>Setup</div>
+</div>
+
+<h3 style="margin-top:30px;">Demand</h3>
+
+<p>
+Orders were introduced using a 2024 demand scenario to analyze how
+the production system responds to the expected workload.
+</p>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>What I Analyzed</h2>
+
+<ul>
+<li>Production capacity and throughput.</li>
+<li>Potential bottlenecks in the production flow.</li>
+<li>Queues and waiting times.</li>
+<li>Resource utilization.</li>
+<li>Impact of setup times on production performance.</li>
+<li>Different equipment and material-flow scenarios.</li>
+</ul>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Investment Scenarios</h2>
+
+<div class="card">
+
+<p>
+The simulation also considered different material-handling options
+and their associated investment costs.
+</p>
+
+<ul>
+<li>5 trolleys at approximately €800 each.</li>
+<li>3 AMRs at approximately €35,000 each.</li>
+<li>1 conveyor system at approximately €150,000.</li>
+</ul>
+
+<p>
+These scenarios provided a basis for comparing operational
+performance with potential investment requirements.
+</p>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Outcome</h2>
+
+<div class="card">
+<p>
+The simulation provided a structured way to test production scenarios
+and understand how operational parameters affect system performance.
+</p>
+
+<p>
+Rather than relying only on assumptions, the model can be used to
+compare alternatives and identify potential bottlenecks before
+implementing changes in a real production environment.
+</p>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+    <p>© Lyna Berkane · Software Engineering · AI · Data</p>
+</footer>
+
+</body>
+</html>
