@@ -1,1 +1,623 @@
-<a href="projects/bmw.html" class="project-link">View case study →</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI & Production Data Analytics | Lyna Berkane</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #171717;
+            background: #f7f7f5;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            padding: 24px 0;
+            border-bottom: 1px solid #ddd;
+            background: #f7f7f5;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .back {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .back:hover {
+            color: #000;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 100px 0 80px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .eyebrow {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.05;
+            max-width: 900px;
+            letter-spacing: -2px;
+            margin-bottom: 30px;
+        }
+
+        .hero-description {
+            max-width: 720px;
+            font-size: 21px;
+            color: #555;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #777;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #4b4b4b;
+            margin-bottom: 18px;
+        }
+
+        /* TWO COLUMNS */
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .box {
+            background: white;
+            padding: 35px;
+            border: 1px solid #e1e1e1;
+        }
+
+        /* CONTRIBUTION */
+
+        .contribution {
+            background: #171717;
+            color: white;
+        }
+
+        .contribution p {
+            color: #d0d0d0;
+        }
+
+        .contribution .section-label {
+            color: #aaa;
+        }
+
+        .contribution h2 {
+            max-width: 800px;
+        }
+
+        .contribution-list {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .contribution-item {
+            padding: 20px;
+            border: 1px solid #444;
+        }
+
+        /* ARCHITECTURE */
+
+        .architecture {
+            margin-top: 40px;
+            padding: 35px;
+            background: white;
+            border: 1px solid #ddd;
+        }
+
+        .flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .flow-box {
+            padding: 20px 25px;
+            border: 1px solid #bbb;
+            background: #fafafa;
+            text-align: center;
+            min-width: 150px;
+            font-weight: 600;
+        }
+
+        .arrow {
+            font-size: 24px;
+            color: #777;
+        }
+
+        /* TECHNOLOGIES */
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .tag {
+            padding: 9px 14px;
+            background: white;
+            border: 1px solid #d5d5d5;
+            font-size: 14px;
+        }
+
+        /* RESULTS */
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .result {
+            background: white;
+            padding: 30px;
+            border: 1px solid #ddd;
+        }
+
+        .result strong {
+            display: block;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+
+            .hero {
+                padding: 70px 0 60px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .contribution-list {
+                grid-template-columns: 1fr;
+            }
+
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="container">
+        <a href="../index.html" class="logo">Lyna Berkane</a>
+
+        <a href="../index.html" class="back">
+            ← Back to portfolio
+        </a>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+    <div class="container">
+
+        <div class="eyebrow">
+            BMW · AI & Data Analytics Internship
+        </div>
+
+        <h1>
+            AI & Production Data Analytics Platform
+        </h1>
+
+        <p class="hero-description">
+            Building scalable data workflows for production analytics,
+            combining cloud infrastructure, API integration and workflow
+            automation to make production data more reliable and usable.
+        </p>
+
+    </div>
+</header>
+
+
+<!-- OVERVIEW -->
+
+<section>
+    <div class="container">
+
+        <div class="section-label">
+            Project overview
+        </div>
+
+        <h2>
+            Turning fragmented production data into reliable workflows.
+        </h2>
+
+        <p>
+            Production environments generate data across multiple systems
+            and internal sources. Before analytics and applications can use
+            this information, the data needs to be collected, prepared,
+            reconciled and made available in a reliable way.
+        </p>
+
+        <p>
+            During my internship, I worked on data and cloud workflows
+            supporting production analytics. The focus was on automating
+            data preparation and integration instead of relying on slow
+            manual cross-checking.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- BUSINESS PROBLEM -->
+
+<section>
+    <div class="container">
+
+        <div class="section-label">
+            Business problem
+        </div>
+
+        <div class="grid">
+
+            <div>
+                <h2>
+                    Production teams need trustworthy data before they can
+                    make data-driven decisions.
+                </h2>
+            </div>
+
+            <div>
+
+                <p>
+                    Production-related information can come from multiple
+                    sources, APIs and systems. Working with these sources
+                    manually creates unnecessary effort and can introduce
+                    inconsistencies.
+                </p>
+
+                <p>
+                    The goal was therefore to create a more automated and
+                    scalable workflow for collecting, processing and
+                    reconciling data.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- TECHNICAL SOLUTION -->
+
+<section>
+    <div class="container">
+
+        <div class="section-label">
+            Technical solution
+        </div>
+
+        <h2>
+            A serverless workflow for production data preparation.
+        </h2>
+
+        <p>
+            I worked with cloud-based services and internal APIs to build
+            workflows that retrieve, process and reconcile data before it
+            is consumed by downstream analytics and applications.
+        </p>
+
+        <div class="architecture">
+
+            <div class="flow">
+
+                <div class="flow-box">
+                    Internal APIs
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+                <div class="flow-box">
+                    Data Processing
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+                <div class="flow-box">
+                    Reconciliation
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+                <div class="flow-box">
+                    Analytics / Apps
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- MY CONTRIBUTION -->
+
+<section class="contribution">
+    <div class="container">
+
+        <div class="section-label">
+            My contribution
+        </div>
+
+        <h2>
+            Combining software engineering, data engineering and cloud
+            technologies.
+        </h2>
+
+        <p>
+            My work focused on preparing production data and building the
+            technical workflows required to make that data usable for
+            downstream systems.
+        </p>
+
+        <div class="contribution-list">
+
+            <div class="contribution-item">
+                <h3>Data preparation</h3>
+                <p>
+                    Preparing and transforming data so that it can be
+                    reliably used by downstream processes.
+                </p>
+            </div>
+
+            <div class="contribution-item">
+                <h3>API integration</h3>
+                <p>
+                    Working with multiple APIs and integrating information
+                    from heterogeneous sources.
+                </p>
+            </div>
+
+            <div class="contribution-item">
+                <h3>Cloud processing</h3>
+                <p>
+                    Working with AWS services to support scalable,
+                    serverless data workflows.
+                </p>
+            </div>
+
+            <div class="contribution-item">
+                <h3>Workflow automation</h3>
+                <p>
+                    Automating repetitive data workflows and connecting
+                    different systems and services.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- BUSINESS IMPACT -->
+
+<section>
+    <div class="container">
+
+        <div class="section-label">
+            Business impact
+        </div>
+
+        <h2>
+            Less manual work. More reliable production data.
+        </h2>
+
+        <p>
+            The workflow approach reduces dependence on manual data
+            cross-checking and creates a more consistent foundation for
+            production analytics and applications.
+        </p>
+
+        <div class="result-grid">
+
+            <div class="result">
+                <strong>Automation</strong>
+                Data preparation and reconciliation can be handled through
+                automated workflows.
+            </div>
+
+            <div class="result">
+                <strong>Scalability</strong>
+                Cloud-based components provide a foundation that can scale
+                with additional data sources and use cases.
+            </div>
+
+            <div class="result">
+                <strong>Reliability</strong>
+                Centralized processing and reconciliation improve the
+                consistency of data used downstream.
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- TECHNOLOGIES -->
+
+<section>
+    <div class="container">
+
+        <div class="section-label">
+            Technologies
+        </div>
+
+        <h2>
+            Technical stack
+        </h2>
+
+        <div class="tags">
+
+            <span class="tag">Python</span>
+            <span class="tag">AWS</span>
+            <span class="tag">AWS Lambda</span>
+            <span class="tag">API Gateway</span>
+            <span class="tag">Snowflake</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">n8n</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Data Engineering</span>
+            <span class="tag">Workflow Automation</span>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- NOTE -->
+
+<section>
+    <div class="container">
+
+        <div class="section-label">
+            About the project
+        </div>
+
+        <h2>
+            Production environment
+        </h2>
+
+        <p>
+            This case study describes my technical contribution at a
+            high level. Specific internal datasets, source code,
+            credentials, internal URLs and confidential company
+            information are intentionally not published.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="container">
+
+        <p>
+            © 2026 Lyna Berkane · AI · Data · Software Engineering
+        </p>
+
+    </div>
+</footer>
+
+</body>
+</html>
