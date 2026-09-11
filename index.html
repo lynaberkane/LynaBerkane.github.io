@@ -1,21 +1,944 @@
-<a href="projects/BMW.html" class="project-link">View case study →</a>
-<!-- HYDRAPHARM -->
-<a href="projects/hydrapharm.html" class="project-link">
-    View case study →
-</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Production -->
-<a href="projects/production-simulation.html" class="project-link">
-    View case study →
-</a>
+    <title>Lyna Berkane | AI · Data · Software Engineering</title>
 
-<!-- BEA -->
-<a href="projects/bea.html" class="project-link">
-    View case study →
-</a>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-<!-- Ergonomics -->
-<a href="projects/ergonomics.html" class="project-link">
-    View case study →
-</a>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f5;
+            color: #171717;
+            line-height: 1.6;
+        }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        /* NAV */
+
+        nav {
+            padding: 24px 0;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            background: #f7f7f5;
+            z-index: 10;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 120px 0 100px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: clamp(48px, 8vw, 88px);
+            line-height: 1;
+            letter-spacing: -4px;
+            max-width: 900px;
+            margin-bottom: 30px;
+        }
+
+        .hero-text {
+            max-width: 700px;
+            font-size: 21px;
+            color: #555;
+        }
+
+        .hero-links {
+            margin-top: 35px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 13px 20px;
+            background: #171717;
+            color: white;
+            border: 1px solid #171717;
+            font-size: 14px;
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: #171717;
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 90px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .section-label {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            color: #777;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            font-size: 42px;
+            line-height: 1.15;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 18px;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .about-text {
+            font-size: 18px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            gap: 25px;
+            margin-top: 45px;
+        }
+
+        .project {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 35px;
+        }
+
+        .project.featured {
+            border: 2px solid #171717;
+        }
+
+        .project-number {
+            font-size: 12px;
+            color: #777;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .project h3 {
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
+            max-width: 800px;
+            font-size: 16px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 25px 0;
+        }
+
+        .project-box {
+            padding: 22px;
+            background: #f7f7f5;
+        }
+
+        .project-box strong {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .tag {
+            border: 1px solid #ccc;
+            padding: 6px 10px;
+            font-size: 12px;
+            background: white;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+            border-bottom: 1px solid #171717;
+            padding-bottom: 3px;
+        }
+
+        .project-link:hover {
+            opacity: 0.55;
+        }
+
+        /* EXPERIENCE */
+
+        .experience-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 40px;
+            padding: 30px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .experience-date {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .experience-item h3 {
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            color: #777;
+            margin-bottom: 12px;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .skill-box {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 25px;
+        }
+
+        .skill-box h3 {
+            margin-bottom: 10px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #171717;
+            color: white;
+        }
+
+        .contact p {
+            color: #ccc;
+            max-width: 650px;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin-top: 15px;
+            border-bottom: 1px solid white;
+            padding-bottom: 4px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #777;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .about-grid,
+            .project-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="container">
+
+        <a href="index.html" class="logo">
+            Lyna Berkane
+        </a>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+    <div class="container">
+
+        <div class="eyebrow">
+            Software Engineer · AI · Data · Cloud
+        </div>
+
+        <h1>
+            Building practical solutions with AI, data and software.
+        </h1>
+
+        <p class="hero-text">
+            I am a Master's student in Applied AI for Digital Production
+            Management with experience across AI, data engineering,
+            software development and production analytics.
+        </p>
+
+        <div class="hero-links">
+            <a href="#projects" class="button">
+                View projects
+            </a>
+
+            <a href="#contact" class="button secondary">
+                Get in touch
+            </a>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+    <div class="container">
+
+        <div class="section-label">
+            About
+        </div>
+
+        <div class="about-grid">
+
+            <div>
+                <h2>
+                    AI, data and software engineering with a focus on real-world applications.
+                </h2>
+            </div>
+
+            <div class="about-text">
+
+                <p>
+                    I am currently pursuing an M.Sc. in Applied AI for
+                    Digital Production Management at TH Deggendorf.
+                </p>
+
+                <p>
+                    My experience includes AI and data analytics in
+                    production environments, recommendation systems,
+                    software development and data-driven simulation.
+                </p>
+
+                <p>
+                    I enjoy working on problems where software,
+                    data and intelligent systems come together to
+                    create practical business value.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+    <div class="container">
+
+        <div class="section-label">
+            Selected projects
+        </div>
+
+        <h2>
+            Projects that combine business problems with technical solutions.
+        </h2>
+
+
+        <div class="projects">
+
+
+            <!-- BMW -->
+
+            <article class="project featured">
+
+                <div class="project-number">
+                    01 · CURRENT
+                </div>
+
+                <h3>
+                    AI & Production Data Analytics Platform
+                </h3>
+
+                <p class="project-description">
+                    Cloud-based data workflows developed during my
+                    BMW internship to improve the preparation,
+                    integration and reliability of production data
+                    used by downstream analytics and applications.
+                </p>
+
+                <div class="project-grid">
+
+                    <div class="project-box">
+                        <strong>Business problem</strong>
+
+                        Production information comes from multiple
+                        sources. Manual data preparation and
+                        cross-checking can be slow and error-prone.
+                    </div>
+
+                    <div class="project-box">
+                        <strong>Technical solution</strong>
+
+                        Automated workflows for retrieving,
+                        processing and reconciling data from
+                        multiple APIs using cloud technologies.
+                    </div>
+
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Lambda</span>
+                    <span class="tag">API Gateway</span>
+                    <span class="tag">Snowflake</span>
+                    <span class="tag">Terraform</span>
+                    <span class="tag">n8n</span>
+                    <span class="tag">Data Engineering</span>
+                </div>
+
+                <a href="projects/BMW.html" class="project-link">
+                    View case study →
+                </a>
+
+            </article>
+
+
+            <!-- HYDRAPHARM -->
+
+            <article class="project">
+
+                <div class="project-number">
+                    02 · DATA SCIENCE
+                </div>
+
+                <h3>
+                    Intelligent Pharmaceutical Recommendation System
+                </h3>
+
+                <p class="project-description">
+                    A recommendation system developed during my
+                    Data Science internship to support pharmaceutical
+                    product recommendations using historical
+                    transaction data.
+                </p>
+
+                <div class="project-grid">
+
+                    <div class="project-box">
+                        <strong>Business problem</strong>
+
+                        Improve product recommendations and support
+                        more informed ordering and distribution
+                        decisions.
+                    </div>
+
+                    <div class="project-box">
+                        <strong>Technical solution</strong>
+
+                        More than 2 million anonymized transactions
+                        were processed and used to develop and
+                        evaluate collaborative filtering and
+                        hybrid recommendation approaches.
+                    </div>
+
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Recommendation Systems</span>
+                    <span class="tag">Collaborative Filtering</span>
+                    <span class="tag">Data Analysis</span>
+                </div>
+
+                <a href="projects/hydrapharm.html" class="project-link">
+                    View case study →
+                </a>
+
+            </article>
+
+
+            <!-- PRODUCTION SIMULATION -->
+
+            <article class="project">
+
+                <div class="project-number">
+                    03 · PRODUCTION ANALYTICS
+                </div>
+
+                <h3>
+                    Data-Driven Production System Simulation
+                </h3>
+
+                <p class="project-description">
+                    A discrete-event simulation model used to
+                    analyze production capacity, bottlenecks,
+                    queues and operational scenarios.
+                </p>
+
+                <div class="project-grid">
+
+                    <div class="project-box">
+                        <strong>Business problem</strong>
+
+                        Understand whether production resources can
+                        handle current and future demand and identify
+                        capacity constraints.
+                    </div>
+
+                    <div class="project-box">
+                        <strong>Technical solution</strong>
+
+                        A production simulation model representing
+                        resources, orders, processing times,
+                        failures, maintenance and production KPIs.
+                    </div>
+
+                </div>
+
+                <div class="tags">
+                    <span class="tag">AnyLogic</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Discrete-Event Simulation</span>
+                    <span class="tag">KPI Analysis</span>
+                    <span class="tag">Production Systems</span>
+                </div>
+
+                <a href="projects/production-simulation.html" class="project-link">
+                    View case study →
+                </a>
+
+            </article>
+
+
+            <!-- BEA -->
+
+            <article class="project">
+
+                <div class="project-number">
+                    04 · SOFTWARE ENGINEERING
+                </div>
+
+                <h3>
+                    Credit Decision Support System
+                </h3>
+
+                <p class="project-description">
+                    A Java-based decision-support application
+                    developed during my software development
+                    internship for credit assessment.
+                </p>
+
+                <div class="project-grid">
+
+                    <div class="project-box">
+                        <strong>Business problem</strong>
+
+                        Reduce manual effort in credit assessment
+                        and provide structured decision support
+                        based on client information.
+                    </div>
+
+                    <div class="project-box">
+                        <strong>Technical solution</strong>
+
+                        Java application implementing business rules,
+                        decision logic and database integration.
+                    </div>
+
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">UML</span>
+                    <span class="tag">NetBeans</span>
+                    <span class="tag">Decision Support</span>
+                    <span class="tag">Database</span>
+                </div>
+
+                <a href="projects/bea.html" class="project-link">
+                    View case study →
+                </a>
+
+            </article>
+
+
+            <!-- ERGONOMICS -->
+
+            <article class="project">
+
+                <div class="project-number">
+                    05 · IoT & DATA
+                </div>
+
+                <h3>
+                    Wearable-Based Ergonomic Analysis
+                </h3>
+
+                <p class="project-description">
+                    An IoT-based project using wearable sensor data
+                    to investigate ergonomic conditions and physical
+                    strain during different working positions.
+                </p>
+
+                <div class="project-grid">
+
+                    <div class="project-box">
+                        <strong>Business problem</strong>
+
+                        Understand how working positions can influence
+                        physical strain and workplace ergonomics.
+                    </div>
+
+                    <div class="project-box">
+                        <strong>Technical solution</strong>
+
+                        IMU sensor data was collected using an Arduino
+                        setup and processed with Python for ergonomic
+                        analysis.
+                    </div>
+
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Arduino</span>
+                    <span class="tag">BNO085</span>
+                    <span class="tag">IoT</span>
+                    <span class="tag">Sensor Data</span>
+                    <span class="tag">Data Analysis</span>
+                </div>
+
+                <a href="projects/ergonomics.html" class="project-link">
+                    View case study →
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+    <div class="container">
+
+        <div class="section-label">
+            Experience
+        </div>
+
+        <h2>
+            Experience
+        </h2>
+
+
+        <div class="experience-item">
+
+            <div class="experience-date">
+                2026
+            </div>
+
+            <div>
+                <h3>AI & Data Analytics Intern</h3>
+
+                <div class="company">
+                    BMW Group · Germany
+                </div>
+
+                <p>
+                    Working on production data preparation,
+                    cloud-based workflows, API integration and
+                    data analytics.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="experience-item">
+
+            <div class="experience-date">
+                2024
+            </div>
+
+            <div>
+                <h3>Data Science Intern</h3>
+
+                <div class="company">
+                    HYDRAPHARM
+                </div>
+
+                <p>
+                    Developed and evaluated recommendation-system
+                    approaches using large-scale transaction data.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="experience-item">
+
+            <div class="experience-date">
+                2022
+            </div>
+
+            <div>
+                <h3>Software Development Intern</h3>
+
+                <div class="company">
+                    Banque Extérieure d'Algérie
+                </div>
+
+                <p>
+                    Developed a Java-based credit decision-support
+                    application using business rules and database
+                    integration.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+    <div class="container">
+
+        <div class="section-label">
+            Skills
+        </div>
+
+        <h2>
+            Technical toolkit
+        </h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-box">
+                <h3>Programming</h3>
+                <p>
+                    Python · Java · SQL · JavaScript
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>AI & Machine Learning</h3>
+                <p>
+                    Machine Learning · Recommendation Systems ·
+                    Data Analysis · Applied AI
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Cloud & Data</h3>
+                <p>
+                    AWS · Lambda · API Gateway · Snowflake ·
+                    Data Pipelines · Terraform
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Automation</h3>
+                <p>
+                    n8n · REST APIs · Workflow Automation ·
+                    System Integration
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Engineering</h3>
+                <p>
+                    Software Development · Databases · UML ·
+                    Git · System Design
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Production Systems</h3>
+                <p>
+                    AnyLogic · Discrete-Event Simulation ·
+                    Production Analytics · KPI Analysis
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+    <div class="container">
+
+        <div class="section-label">
+            Contact
+        </div>
+
+        <h2>
+            Let's connect.
+        </h2>
+
+        <p>
+            I am interested in opportunities in software engineering,
+            AI, data engineering and applied machine learning.
+        </p>
+
+        <!-- CHANGE THESE LINKS TO YOUR REAL ONES -->
+
+        <a href="mailto:YOUR_EMAIL@example.com">
+            YOUR_EMAIL@example.com
+        </a>
+
+        <br>
+
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank">
+            LinkedIn →
+        </a>
+
+        <br>
+
+        <a href="https://github.com/lynaberkane" target="_blank">
+            GitHub →
+        </a>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="container">
+        <p>
+            © 2026 Lyna Berkane
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
