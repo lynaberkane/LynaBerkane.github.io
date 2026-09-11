@@ -1,1 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Ergonomic Analysis with Wearable Sensors | Lyna Berkane</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #1f2937;
+    background: #f8fafc;
+}
+
+nav {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 18px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: #111827;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+.hero {
+    background: #111827;
+    color: white;
+    padding: 90px 0;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 19px;
+    color: #d1d5db;
+    max-width: 800px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e5e7eb;
+    color: #374151;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 5px 5px 5px 0;
+    font-size: 14px;
+}
+
+section {
+    padding: 55px 0;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border: 1px solid #e5e7eb;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.highlight {
+    border-left: 4px solid #111827;
+    padding-left: 20px;
+    margin: 25px 0;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.metric {
+    background: #f1f5f9;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.metric strong {
+    display: block;
+    font-size: 30px;
+    color: #111827;
+}
+
+footer {
+    background: #111827;
+    color: #d1d5db;
+    text-align: center;
+    padding: 30px;
+}
+
+@media(max-width: 700px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .metrics {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="container">
+        <a href="../index.html">← Lyna Berkane</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+
+        <p>IoT · Sensor Data · Ergonomic Analysis</p>
+
+        <h1>Ergonomic Analysis Using Wearable Sensors</h1>
+
+        <p>
+            Analysis of body movement and ergonomic strain using wearable
+            sensor data collected with an IMU-based system.
+        </p>
+
+    </div>
+</header>
+
+<main>
+
+<section>
+<div class="container">
+
+<h2>Project Overview</h2>
+
+<p>
+This project explored how wearable sensor data can be used to analyze
+ergonomic conditions during repetitive tasks.
+</p>
+
+<p>
+An IMU-based sensor system was used to collect movement data while
+participants performed a LEGO assembly task in different working
+positions.
+</p>
+
+<div class="highlight">
+<strong>Focus:</strong> IoT sensors, data acquisition, Python data
+processing and ergonomic analysis.
+</div>
+
+<div>
+<span class="tag">Python</span>
+<span class="tag">Arduino</span>
+<span class="tag">BNO085</span>
+<span class="tag">Sensor Data</span>
+<span class="tag">IoT</span>
+<span class="tag">Ergonomics</span>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Research Question</h2>
+
+<div class="card">
+
+<p>
+The project investigated how different working positions influence
+ergonomic strain during a repetitive assembly task.
+</p>
+
+<p>
+Two conditions were compared: performing the task while sitting and
+performing it while standing.
+</p>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Data Collection</h2>
+
+<div class="card">
+
+<p>
+A BNO085 inertial measurement unit (IMU) connected to an Arduino was
+used to collect sensor measurements.
+</p>
+
+<p>
+The collected data was exported and processed using Python for further
+analysis.
+</p>
+
+<p>
+The study included measurements from 9 participants.
+</p>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Analysis</h2>
+
+<div class="card">
+
+<h3>Working Position Comparison</h3>
+
+<p>
+The sensor data was analyzed to compare the measured task performance
+and ergonomic strain between sitting and standing conditions.
+</p>
+
+<div class="metrics">
+
+<div class="metric">
+<strong>833.88 s</strong>
+Sitting task time
+</div>
+
+<div class="metric">
+<strong>861.64 s</strong>
+Standing task time
+</div>
+
+<div class="metric">
+<strong>26.81%</strong>
+Non-ergonomic strain — sitting
+</div>
+
+<div class="metric">
+<strong>11.05%</strong>
+Non-ergonomic strain — standing
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>My Contribution</h2>
+
+<ul>
+<li>Worked with wearable sensor data collected from an IMU system.</li>
+<li>Used Arduino-based hardware for data acquisition.</li>
+<li>Processed sensor data using Python.</li>
+<li>Structured and analyzed CSV datasets.</li>
+<li>Compared ergonomic measurements between sitting and standing conditions.</li>
+<li>Interpreted the collected data to evaluate ergonomic differences.</li>
+</ul>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Outcome</h2>
+
+<div class="card">
+
+<p>
+The project demonstrated a practical pipeline from physical sensor
+data collection to data processing and ergonomic analysis.
+</p>
+
+<p>
+It provided experience at the intersection of IoT, data analytics and
+human-centered industrial applications.
+</p>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+    <p>© Lyna Berkane · Software Engineering · AI · Data</p>
+</footer>
+
+</body>
+</html>
